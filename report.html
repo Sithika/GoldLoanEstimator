@@ -1,0 +1,150 @@
+<html>
+<head>
+  <title>Loan Estimator</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' />
+  <link rel='stylesheet' href='style.css' />
+
+  <script type="text/javascript" src="mainpage.js"></script>
+</head>
+<body>
+  <div class="row">
+
+ <div class="column">
+  <button type="submit" class="btn btn-success btnStyle" id="syncBtn">
+    Sync Data</button>
+ </div>
+ <div class="column" >
+  <button type="submit" onclick="printReport();" class="btn btn-primary btnStyle printBtn" id="printBtn">
+    Print</button>
+  </div>
+</div>
+<!-- </br> -->
+    <div class="row">
+   <div class="container " id="inputform">
+    <div class="form-style-6">
+       <h1>Enter customer - jewel details</h1>
+        <form class="border border-light p-5" method="post"  id="clientform">
+          <div class="form-group">
+            <br>
+            <label>Status</label>
+            <select name="status" form="clientform">
+              <option value="mr">Mr</option>
+              <option value="mrs">Mrs</option>
+              <option value="ms">Ms</option>
+            </select>
+
+            <label for="nameInput">Customer name</label>
+            <input type="type" class="form-control" id="nameInput" placeholder="customer name" name="name">
+            <br>
+            <label for="mobileInput">Mobile</label>
+            <input type="type" class="form-control" id="mobileInput" placeholder="Mobile" name="mobile">
+            <br>
+            <label for="emailInput">Email</label>
+            <input type="type" class="form-control" id="emailInput" placeholder="Email" name="email">
+            <br>
+            <label for="GoldPercentInput">Result</label>
+            <input type="type" class="form-control" id="GoldPercentInput" 
+            placeholder="Gold % " name="result">
+            <br>
+            <label for="GrossWt">Gross weight</label>
+            <input type="type" class="form-control" id="GrossWtInput" placeholder="Gross Wgt." name="GrossWt">
+            <br>
+            <label for="faxInput">Less</label>
+            <input type="type" class="form-control" id="LessInput" placeholder="Less" name="Less">
+            <br>
+            <label for="rateInput">Rate</label>
+            <input type="type" class="form-control" id="rateInput" 
+            placeholder="Rate" name="Rate">
+            <br>
+          </div>
+          <button type="submit" class="btn btn-primary btnStyle" id="estimate">
+            Submit</button>
+            
+        </form>
+    </div>
+  </div> 
+  <div class="column">
+    <div id="report" class="container" style="display: none;" >
+      <!-- <h1>Customer Details</h1> -->
+      <table class="table table-striped">
+          <thead>
+            <h1>Customer Details</h1>
+          </thead>
+          <tbody>
+            <tr>
+                <th>Name</th>
+              <td id="nameval"></td>
+            </tr>
+            <tr>
+                <th>Mobile</th>
+              <td id="mobileVal"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+              <td id= "emailVal"></td>
+            </tr>
+            </tbody>
+            </table>
+      <table class="table table-striped">
+        <thead>
+          <h1>Estimation Report</h1>
+        </thead>
+        <tbody>
+          <tr>
+              <th>Result</th>
+            <td id="GoldPercentVal"></td>
+          </tr>
+          <tr>
+              <th>Gross Weight</th>
+            <td id="grossVal"></td>
+          </tr>
+          <tr>
+              <th>Less</th>
+            <td id= "lessVal"></td>
+          </tr>
+          <tr>
+              <th>Net weight</th>
+              <td id="netwtVal"></td>
+            </tr>
+            <tr>
+            <th>Purity</th>
+              <td id="purityVal"></td>
+            </tr> 
+            <tr>
+            <th>Rate</th>
+              <td id="rateVal"></td>
+            </tr>
+            <tr>
+              <th>Amount</th>
+              <td id= "amtVal"></td>
+              </tr>
+        </tbody>
+      </table>
+    
+</div>
+  </div>
+  <div  class="column">
+  </br>
+    <div id="goldImgDiv">
+
+    </div>
+    <!-- <img id="goldImg" src=""  width="500" height="600"> -->
+    </div>
+</div>
+
+
+  <!-- <h1 ng-controller="HelloWorldCtrl">{{message}}</h1> -->
+<script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+<script src="src/app.js">  
+    
+</script> 
+
+
+</body>  
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">  
+  </script>     
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
